@@ -2,7 +2,6 @@
     box-sizing: border-box;
 }
 body{
-    width: 1920px;
     padding: 0;
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
@@ -54,11 +53,12 @@ a{
     height: 24px;
 }
 .header-search-input{
+    margin-right: 49px;
     margin-left: 49px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 154px;
+    width: 100%;
     height: 20px;
     border: none;
     line-height: 20px;
@@ -118,7 +118,7 @@ a{
     width: 24px;
 }
 .collection-section{
-    margin: 40px 350px;
+    margin: 40px auto;
 }
 .collection-title{
     margin-left: 20px;
@@ -150,8 +150,11 @@ a{
     height: 100%;
 }
 .collection-title-container{
+    margin: 0 auto;
+    max-width: 2880px;
     position: relative;
     display: flex;
+    align-items: center;
     justify-content: space-between;
     align-items: center;
 }
@@ -176,6 +179,7 @@ a{
     margin-left: 0;
 }
 .collection-icon-bg{
+    margin-left: 40px;
     height: 24px;
     width: 24px;
 }
@@ -197,8 +201,6 @@ a{
     cursor: pointer;
 }
 .collection-icon-bg{
-    position: absolute;
-    right: -132px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -223,15 +225,19 @@ a{
     height: 24px;
 }
 .collection-desc{
-    margin-top: 10px;
-    margin-left: 44px;
+    max-width: 1980px;
+    margin: 10px auto 0;
     line-height: 20px;
     color: #999;
 }
 .collecttion-list{
-    margin-top: 30px;
+    margin: 30px auto;
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    min-width: 780px;
+    max-width: 3100px;
 }
 .collecttion-item{
     margin-bottom: 20px;
@@ -239,8 +245,15 @@ a{
     width: 290px;
     height: 460px;
 }
-.collecttion-item:nth-child(4n){
-    margin-right: 0;
+@media (max-width: 2096px){
+    .collecttion-list{
+        max-width: 1860px;
+    }
+}
+@media (max-width: 1572px){
+    .collecttion-list{
+        max-width: 1560px;
+    }
 }
 .collecttion-item-img{
     width: 100%;
@@ -262,7 +275,7 @@ a{
     justify-content: center;
     align-items: center;
     height: 100%;
-    width: 1920px;
+    width: 100%;
     background-color: rgba(0, 0, 0, .5) ;
 }
 .upload-container{
@@ -289,7 +302,6 @@ a{
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
 .upload-img{
     margin-top: 116px;
@@ -335,6 +347,13 @@ a{
     border-radius: 2px;
     border: 1px solid #EFEFEF;
 }
+.upload-ri-input{
+    width: 100%;
+    height: 100%;
+    resize: none;
+    border: none;
+    overflow-y: auto;
+}
 .upload-ri-num{
     position: absolute;
     right: 10px;
@@ -377,7 +396,7 @@ a{
     justify-content: center;
     align-items: center;
     height: 100%;
-    width: 1920px;
+    width: 100%;
     background-color: rgba(0, 0, 0, .5) ;
 }
 .illustration-container{
@@ -397,6 +416,8 @@ a{
     color: #333;
     font-size: 12px;
     line-height: 17px;
+    border: none;
+    resize: none;
 }
 .illustration-num{
     position: absolute;
@@ -437,7 +458,7 @@ a{
     justify-content: center;
     align-items: center;
     height: 100%;
-    width: 1920px;
+    width: 100%;
     background-color: rgba(0, 0, 0, .5) ;
 }
 .edit-container{
@@ -482,6 +503,7 @@ a{
     border: 1px solid #EFEFEF;
 }
 .edit-select-input{
+    width: 100%;
     border: none;
 }
 .edit-select-input::placeholder{
@@ -497,6 +519,12 @@ a{
     height: 100px;
     border-radius: 2px;
     border: 1px solid #EFEFEF;
+}
+.edit-desc-input{
+    width: 100%;
+    height: 100%;
+    resize: none;
+    border: none;
 }
 .edit-desc-num{
     position: absolute;
@@ -532,16 +560,6 @@ a{
     height: 40px;
 }
 .choose-section{
-    position: absolute;
-    top: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 1920px;
-    background-color: rgba(0, 0, 0, .5) ;
-}
-.choose-section{
     display: none;
     position: absolute;
     top: 0;
@@ -549,7 +567,7 @@ a{
     justify-content: center;
     align-items: center;
     height: 100%;
-    width: 1920px;
+    width: 100%;
     background-color: rgba(0, 0, 0, .5) ;
 }
 .choose-container{
@@ -596,6 +614,7 @@ a{
 .choose-select-input{
     margin-left: 10px;
     border: none;
+    width: 100%;
 }
 .choose-select-input::placeholder{
     color: #333;
